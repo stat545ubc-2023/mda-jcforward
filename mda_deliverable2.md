@@ -422,6 +422,13 @@ analysis in the remaining tasks:
 Explain your decision for choosing the above two research questions.
 
 <!--------------------------- Start your work below --------------------------->
+
+Based on the interpretations of the results from 1.3, I decided to go
+with my first 2 research questions because they had the most intersting
+results. I wanted to delve further into the downward trend seen in the
+max flow rate graph. I also wanted to see if there was anything else
+that could explain the big differences in flow rate between Sym A and E.
+
 <!----------------------------------------------------------------------------->
 
 Now, try to choose a version of your data that you think will be
@@ -509,13 +516,13 @@ specifics in STAT 545.
 
 **Linear Regression Analysis**
 
--   In this model, the year will act as the independent variable (X),
-    and the maximum flow rate will be the dependent variable (Y).
+-   In this model, the year acts as the independent variable (X), and
+    the maximum flow rate will be the dependent variable (Y).
 
--   In the output, the coefficient for year will indicate the average
-    change in maximum flow rate for each additional year. A p-value less
-    than 0.05 for the year variable would suggest that the change in
-    flow rate over time is statistically significant.
+-   In the output, the coefficient for year will show average change in
+    maximum flow rate for each additional year. A p-value less than 0.05
+    for the year variable would suggest that our hypothesis that the
+    change in flow rate over time is statistically significant.
 
 <!-- -->
 
@@ -582,9 +589,10 @@ Produced Values:
     by about 0.374 units (on average) each year.
 
 -   The p-value associated with this coefficient is approximately 0.046,
-    (p&lt;0.05). This suggests that there is a statistically
-    significance between the year and the maximum flow rate; supports
-    the hypothesis that maximum flow rate has been changing over time.
+    (p&lt;0.05). This suggests that there is a statistical significance
+    between the year and the maximum flow rate. Also, circling back to
+    3.1, this p&lt;0.05 value supports the hypothesis that maximum flow
+    rate has been changing over time.
 
 <!-- -->
 
@@ -636,6 +644,11 @@ file in your `output` folder. Use the `here::here()` function.
     file, and remake it simply by knitting this Rmd file.
 
 <!-------------------------- Start your work below ---------------------------->
+
+**4.1**
+
+I took the summary table from research question 1; it looks at how flow
+rate has changed generally over time.
 
     library(tidyverse)
     library(here)
