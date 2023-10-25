@@ -1,3 +1,6 @@
+Mini Data-Analysis Deliverable 1
+================
+
 *To complete this milestone, you can either edit [this `.rmd`
 file](https://raw.githubusercontent.com/UBC-STAT/stat545.stat.ubc.ca/master/content/mini-project/mini-project-2.Rmd)
 directly. Fill in the sections that are commented out with
@@ -11,11 +14,10 @@ In Milestone 1, you explored your data. and came up with research
 questions. This time, we will finish up our mini data analysis and
 obtain results for your data by:
 
--   Making summary tables and graphs
--   Manipulating special data types in R: factors and/or dates and
-    times.
--   Fitting a model object to your data, and extract a result.
--   Reading and writing data as separate files.
+- Making summary tables and graphs
+- Manipulating special data types in R: factors and/or dates and times.
+- Fitting a model object to your data, and extract a result.
+- Reading and writing data as separate files.
 
 We will also explore more in depth the concept of *tidy data.*
 
@@ -54,12 +56,11 @@ your results in the context of a different research question.
 
 By the end of this milestone, you should:
 
--   Understand what *tidy* data is, and how to create it using `tidyr`.
--   Generate a reproducible and clear report using R Markdown.
--   Manipulating special data types in R: factors and/or dates and
-    times.
--   Fitting a model object to your data, and extract a result.
--   Reading and writing data as separate files.
+- Understand what *tidy* data is, and how to create it using `tidyr`.
+- Generate a reproducible and clear report using R Markdown.
+- Manipulating special data types in R: factors and/or dates and times.
+- Fitting a model object to your data, and extract a result.
+- Reading and writing data as separate files.
 
 # Setup
 
@@ -264,45 +265,45 @@ research questions are yielding interesting results?
 
 Graph 1: **Trend of Flow Rate Over Time**
 
--   The flow rate over the years appear to look highly variable. The
-    general trend, indicated by the blue line, shows a slight decrease
-    over the period shown.
--   There are extreme fluctuations, which could be because of
-    inconsistent data collection methods, measurement errors, or genuine
-    variation in flow rates (which could be interesting).
--   Refining the research question: Can we segment the data further,
-    maybe by region or source, to better understand trends
+- The flow rate over the years appear to look highly variable. The
+  general trend, indicated by the blue line, shows a slight decrease
+  over the period shown.
+- There are extreme fluctuations, which could be because of inconsistent
+  data collection methods, measurement errors, or genuine variation in
+  flow rates (which could be interesting).
+- Refining the research question: Can we segment the data further, maybe
+  by region or source, to better understand trends
 
 Graph 2: **Distribution of Flow Rates by ‘sym’ Levels**
 
--   There appears to be differences in flow rate distribution among the
-    ‘sym’ levels. ‘sym’ level E has a higher median flow rate and
-    exhibits a wider interquartile range compared to other levels.
--   Levels A and B have significantly lower values, with B having some
-    outliers.
--   Refining the research question: Would be worth looking into what
-    kind of factors are behind the difference between Sym A and E
+- There appears to be differences in flow rate distribution among the
+  ‘sym’ levels. ‘sym’ level E has a higher median flow rate and exhibits
+  a wider interquartile range compared to other levels.
+- Levels A and B have significantly lower values, with B having some
+  outliers.
+- Refining the research question: Would be worth looking into what kind
+  of factors are behind the difference between Sym A and E
 
 Graph 3: **Histogram of Flow Rates**
 
--   The majority of the data points are clustered in the very low flow
-    range, basically near 0. There’s a minor spread between 100-400, but
-    these counts are significantly lower than the major peak.
--   This suggests that most instances have a low flow rate with some
-    exceptions.
--   Could be interesting to look more at these outliers though
--   Refining the research question: what kind of factors lead to the
-    overwhelming number of flow rates near zero?
+- The majority of the data points are clustered in the very low flow
+  range, basically near 0. There’s a minor spread between 100-400, but
+  these counts are significantly lower than the major peak.
+- This suggests that most instances have a low flow rate with some
+  exceptions.
+- Could be interesting to look more at these outliers though
+- Refining the research question: what kind of factors lead to the
+  overwhelming number of flow rates near zero?
 
 Graph 4: **Comparison of Flow Rates between Extreme Types**
 
--   With two peaks, one at low flow rates and another at around 200, it
-    suggests that there are two primary behaviors or events that lead to
-    these peaks in the maximum extreme type
--   Refining the research question: Because of the peak at the 200 flow
-    mark for the maximum extreme type, are there specific conditions,
-    events, or anomalies during those periods?
-    <!----------------------------------------------------------------------------->
+- With two peaks, one at low flow rates and another at around 200, it
+  suggests that there are two primary behaviors or events that lead to
+  these peaks in the maximum extreme type
+- Refining the research question: Because of the peak at the 200 flow
+  mark for the maximum extreme type, are there specific conditions,
+  events, or anomalies during those periods?
+  <!----------------------------------------------------------------------------->
 
 # Task 2: Tidy your data
 
@@ -311,15 +312,15 @@ here is to understand how to do this reshaping with the `tidyr` package.
 
 A reminder of the definition of *tidy* data:
 
--   Each row is an **observation**
--   Each column is a **variable**
--   Each cell is a **value**
+- Each row is an **observation**
+- Each column is a **variable**
+- Each cell is a **value**
 
 ### 2.1 (2 points)
 
 Based on the definition above, can you identify if your data is tidy or
-untidy? Go through all your columns, or if you have &gt;8 variables,
-just pick 8, and explain whether the data is untidy or tidy.
+untidy? Go through all your columns, or if you have \>8 variables, just
+pick 8, and explain whether the data is untidy or tidy.
 
 <!--------------------------- Start your work below --------------------------->
 
@@ -335,10 +336,10 @@ just pick 8, and explain whether the data is untidy or tidy.
     ## $ flow         <dbl> 314, 230, 264, 174, 232, 214, 236, 309, 174, 345, 185, 24…
     ## $ sym          <chr> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
 
-1.  station\_id: Each value represents the identifier of a station -
-    this is tidy.
+1.  station_id: Each value represents the identifier of a station - this
+    is tidy.
 2.  year: Each value represents the year of observation - this is tidy.
-3.  extreme\_type: Each value represents the type of extreme - this is
+3.  extreme_type: Each value represents the type of extreme - this is
     tidy.
 4.  month: Each value represents the month of observation - this is
     tidy.
@@ -499,31 +500,29 @@ as a variable, and print its output to screen. We’ll omit having to
 justify your choice, because we don’t expect you to know about model
 specifics in STAT 545.
 
--   **Note**: It’s OK if you don’t know how these models/tests work.
-    Here are some examples of things you can do here, but the sky’s the
-    limit.
+- **Note**: It’s OK if you don’t know how these models/tests work. Here
+  are some examples of things you can do here, but the sky’s the limit.
 
-    -   You could fit a model that makes predictions on Y using another
-        variable, by using the `lm()` function.
-    -   You could test whether the mean of Y equals 0 using `t.test()`,
-        or maybe the mean across two groups are different using
-        `t.test()`, or maybe the mean across multiple groups are
-        different using `anova()` (you may have to pivot your data for
-        the latter two).
-    -   You could use `lm()` to test for significance of regression
-        coefficients.
+  - You could fit a model that makes predictions on Y using another
+    variable, by using the `lm()` function.
+  - You could test whether the mean of Y equals 0 using `t.test()`, or
+    maybe the mean across two groups are different using `t.test()`, or
+    maybe the mean across multiple groups are different using `anova()`
+    (you may have to pivot your data for the latter two).
+  - You could use `lm()` to test for significance of regression
+    coefficients.
 
 <!-------------------------- Start your work below ---------------------------->
 
 **Linear Regression Analysis**
 
--   In this model, the year acts as the independent variable (X), and
-    the maximum flow rate will be the dependent variable (Y).
+- In this model, the year acts as the independent variable (X), and the
+  maximum flow rate will be the dependent variable (Y).
 
--   In the output, the coefficient for year will show average change in
-    maximum flow rate for each additional year. A p-value less than 0.05
-    for the year variable would suggest that our hypothesis that the
-    change in flow rate over time is statistically significant.
+- In the output, the coefficient for year will show average change in
+  maximum flow rate for each additional year. A p-value less than 0.05
+  for the year variable would suggest that our hypothesis that the
+  change in flow rate over time is statistically significant.
 
 <!-- -->
 
@@ -565,14 +564,14 @@ specifics in STAT 545.
 Produce something relevant from your fitted model: either predictions on
 Y, or a single value like a regression coefficient or a p-value.
 
--   Be sure to indicate in writing what you chose to produce.
--   Your code should either output a tibble (in which case you should
-    indicate the column that contains the thing you’re looking for), or
-    the thing you’re looking for itself.
--   Obtain your results using the `broom` package if possible. If your
-    model is not compatible with the broom function you’re needing, then
-    you can obtain your results by some other means, but first indicate
-    which broom function is not compatible.
+- Be sure to indicate in writing what you chose to produce.
+- Your code should either output a tibble (in which case you should
+  indicate the column that contains the thing you’re looking for), or
+  the thing you’re looking for itself.
+- Obtain your results using the `broom` package if possible. If your
+  model is not compatible with the broom function you’re needing, then
+  you can obtain your results by some other means, but first indicate
+  which broom function is not compatible.
 
 <!-------------------------- Start your work below ---------------------------->
 
@@ -586,14 +585,14 @@ Produced Values:
 1.  Regression Coefficient for year: -0.3739812
 2.  P-value for year coefficient: 0.04578777
 
--   These produced values suggests that the maximum flow rate decreases
-    by about 0.374 units (on average) each year.
+- These produced values suggests that the maximum flow rate decreases by
+  about 0.374 units (on average) each year.
 
--   The p-value associated with this coefficient is approximately 0.046,
-    (p&lt;0.05). This suggests that there is a statistical significance
-    between the year and the maximum flow rate. Also, circling back to
-    3.1, this p&lt;0.05 value supports the hypothesis that maximum flow
-    rate has been changing over time.
+- The p-value associated with this coefficient is approximately 0.046,
+  (p\<0.05). This suggests that there is a statistical significance
+  between the year and the maximum flow rate. Also, circling back to
+  3.1, this p\<0.05 value supports the hypothesis that maximum flow rate
+  has been changing over time.
 
 <!-- -->
 
@@ -637,12 +636,12 @@ there.
 Take a summary table that you made from Task 1, and write it as a csv
 file in your `output` folder. Use the `here::here()` function.
 
--   **Robustness criteria**: You should be able to move your Mini
-    Project repository / project folder to some other location on your
-    computer, or move this very Rmd file to another location within your
-    project repository / folder, and your code should still work.
--   **Reproducibility criteria**: You should be able to delete the csv
-    file, and remake it simply by knitting this Rmd file.
+- **Robustness criteria**: You should be able to move your Mini Project
+  repository / project folder to some other location on your computer,
+  or move this very Rmd file to another location within your project
+  repository / folder, and your code should still work.
+- **Reproducibility criteria**: You should be able to delete the csv
+  file, and remake it simply by knitting this Rmd file.
 
 <!-------------------------- Start your work below ---------------------------->
 
@@ -667,8 +666,7 @@ Write your model object from Task 3 to an R binary file (an RDS), and
 load it again. Be sure to save the binary file in your `output` folder.
 Use the functions `saveRDS()` and `readRDS()`.
 
--   The same robustness and reproducibility criteria as in 4.1 apply
-    here.
+- The same robustness and reproducibility criteria as in 4.1 apply here.
 
 <!-------------------------- Start your work below ---------------------------->
 
@@ -755,16 +753,16 @@ something like “This folder contains the source for Milestone 1”).
 
 All output is recent and relevant:
 
--   All Rmd files have been `knit`ted to their output md files.
--   All knitted md files are viewable without errors on Github. Examples
-    of errors: Missing plots, “Sorry about that, but we can’t show files
-    that are this big right now” messages, error messages from broken R
-    code
--   All of these output files are up-to-date – that is, they haven’t
-    fallen behind after the source (Rmd) files have been updated.
--   There should be no relic output files. For example, if you were
-    knitting an Rmd to html, but then changed the output to be only a
-    markdown file, then the html file is a relic and should be deleted.
+- All Rmd files have been `knit`ted to their output md files.
+- All knitted md files are viewable without errors on Github. Examples
+  of errors: Missing plots, “Sorry about that, but we can’t show files
+  that are this big right now” messages, error messages from broken R
+  code
+- All of these output files are up-to-date – that is, they haven’t
+  fallen behind after the source (Rmd) files have been updated.
+- There should be no relic output files. For example, if you were
+  knitting an Rmd to html, but then changed the output to be only a
+  markdown file, then the html file is a relic and should be deleted.
 
 Our recommendation: delete all output files, and re-knit each
 milestone’s Rmd file, so that everything is up to date and relevant.
