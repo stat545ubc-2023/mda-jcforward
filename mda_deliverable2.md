@@ -265,9 +265,9 @@ research questions are yielding interesting results?
 Graph 1: **Trend of Flow Rate Over Time**
 
 -   The flow rate over the years appear to look highly variable. The
-    general trend, indicated by the blue line, seems to suggest a slight
-    decrease over the period shown.
--   There are extreme fluctuations, which could be indicative of
+    general trend, indicated by the blue line, shows a slight decrease
+    over the period shown.
+-   There are extreme fluctuations, which could be because of
     inconsistent data collection methods, measurement errors, or genuine
     variation in flow rates (which could be interesting).
 -   Refining the research question: Can we segment the data further,
@@ -275,7 +275,7 @@ Graph 1: **Trend of Flow Rate Over Time**
 
 Graph 2: **Distribution of Flow Rates by ‘sym’ Levels**
 
--   There appears to be a disparity in flow rate distribution among the
+-   There appears to be differences in flow rate distribution among the
     ‘sym’ levels. ‘sym’ level E has a higher median flow rate and
     exhibits a wider interquartile range compared to other levels.
 -   Levels A and B have significantly lower values, with B having some
@@ -286,8 +286,8 @@ Graph 2: **Distribution of Flow Rates by ‘sym’ Levels**
 Graph 3: **Histogram of Flow Rates**
 
 -   The majority of the data points are clustered in the very low flow
-    range, specifically near 0. There’s a minor spread between 100-400,
-    but these counts are significantly lower than the major peak.
+    range, basically near 0. There’s a minor spread between 100-400, but
+    these counts are significantly lower than the major peak.
 -   This suggests that most instances have a low flow rate with some
     exceptions.
 -   Could be interesting to look more at these outliers though
@@ -296,9 +296,9 @@ Graph 3: **Histogram of Flow Rates**
 
 Graph 4: **Comparison of Flow Rates between Extreme Types**
 
--   With two dominant peaks, one at low flow rates and another around
-    200, it suggests that there are two primary behaviors or events that
-    lead to these peaks in the maximum extreme type
+-   With two peaks, one at low flow rates and another at around 200, it
+    suggests that there are two primary behaviors or events that lead to
+    these peaks in the maximum extreme type
 -   Refining the research question: Because of the peak at the 200 flow
     mark for the maximum extreme type, are there specific conditions,
     events, or anomalies during those periods?
@@ -345,7 +345,8 @@ just pick 8, and explain whether the data is untidy or tidy.
 5.  day: Each value represents the day of observation - this is tidy.
 6.  flow: Each value represents the flow rate - this is tidy.
 7.  sym: Each value represents some quality indicator - this is tidy.
-    <!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
 
 ### 2.2 (4 points)
 
