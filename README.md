@@ -4,13 +4,13 @@
 
 This repository contains an R project that explores the `flow_sample` dataset, focusing on understanding the relationship between water flow rates and various variables such as time (month and year) and station types. It aims to uncover seasonal trends, investigate missing values, and identify areas of interest for water conservation.
 
-###Files 
+### Files 
 
 - Milestone 1: contains scripts and markdown files for milestone 1. More concerned with data exploration and research question making.
 - Milestone 2: contains scripts and markdown files for milestone 2. More concerned with data analysis and tidying.
 - Output: contains CSV and R binary file for Task 4 of milestone 2
 - mda_deliverable1_files: contain png files for the outputs for Milestone 1
-- - mda_deliverable2_files: contain png files for the outputs for Milestone 2
+- mda_deliverable2_files: contain png files for the outputs for Milestone 2
 
 ## How to Engage with this Repository
 
